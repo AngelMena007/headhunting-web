@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro HeadHunting</title>
+    <link rel="stylesheet" href="css/estilosr.css">
+</head>
+<body>
+
+<header class="header-principal">
+    <div class="espaciador-izquierda"></div> 
+    <div class="seccion-registro">
+        <div class="barra-registro">REGISTRO</div>
+    </div>
+    <div class="logo-area-derecha">
+        <div class="texto-logo-mini">
+        </div>
+        <a href="index.html"><img src="imgs/Logo.png" alt="Logo" class="img-mini"></a>
+    </div>
+</header>
+
+<div class="linea-azul-separadora"></div>
+
+<main>
+    <form class="main-container">
+        <!-- Interruptores invisibles -->
+        <input type="radio" name="pasos" id="paso1" checked style="display: none;">
+        <input type="radio" name="pasos" id="paso2" style="display: none;">
+
+        <!-- SECCIÓN 1: DATOS GENERALES -->
+        <div class="seccion-form" id="contenido-paso1">
+            <h2 class="titulo-seccion">1. Información Personal</h2>
+            <div class="grid-campos">
+                <div class="campo">
+                    <label>Nombre completo:</label>
+                    <input type="text" placeholder="Ej: Sebastian Villagomez">
+                </div>
+                <div class="campo">
+                    <label>Correo electrónico:</label>
+                    <input type="email">
+                </div>
+                <div class="campo">
+                    <label>Número de teléfono:</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="campo">
+                    <label>Ciudad/País:</label>
+                    <input type="text" placeholder="Quito/Ecuador">
+                </div>
+            </div>
+            
+            <!-- Este label actúa como el botón "Siguiente" -->
+            <div class="btn-container">
+                <label for="paso2" class="btn-fake">Siguiente</label>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: PERFIL Y CV -->
+        <div class="seccion-form" id="contenido-paso2">
+            <h2 class="titulo-seccion">2. Perfil Profesional   </h2>
+            <div class="grid-campos">
+                <div class="campo">
+                    <label>Tipo de Perfil:</label>
+                    <div class="opciones-radio">
+                        <input type="radio" name="perfil"> Administrativo<br>
+                        <input type="radio" name="perfil"> Empleador<br>
+                        <input type="radio" name="perfil"> Empleado
+                    </div>
+                </div>
+                <div class="campo">
+                    <label>Habilidades:</label>
+                    <input type="text" placeholder="Ej: C++, Java, Linux">
+                </div>
+                <div class="campo">
+                    <label for="archivo-cv">C.V / Fotografía:</label>
+                    <div class="cv-placeholder">
+                        <input type="file" id="archivo-cv" style="display: none;">
+                        <label for="archivo-cv" class="upload-area">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" width="60">
+                            <span class="upload-text">Haz clic para subir archivo</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="campo">
+                    <label>Nivel de estudio:</label>
+                    <div class="opciones-radio">
+                        <input type="radio" name="estudio"> Escuela<br>
+                        <input type="radio" name="estudio"> Colegio<br>
+                        <input type="radio" name="estudio"> Universidad
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <label for="paso1" class="btn-regresar">← Volver</label>
+                <button type="submit" class="btn-enviar"><a href="login.html">Finalizar Registro</a></button>
+            </div>
+        </div>
+    </form>
+</main>

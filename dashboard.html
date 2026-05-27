@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <title>Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styled.css">
+</head>
+
+<body>
+    <button class="btn btn-outline-dark d-md-none position-fixed top-0 start-0 m-3 z-3 shadow-sm" type="button"
+        data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+        <i class="fa-solid fa-bars fs-4"></i>
+    </button>
+
+    <div class="d-flex">
+        <div class="offcanvas-md offcanvas-start d-flex flex-column flex-shrink-0 p-3 bg-white text-dark border-end position-sticky top-0"
+            id="menuLateral" style="width: 280px; height: 100vh;">
+            <a href="index.html"
+                class="d-flex flex-column align-items-center justify-content-center text-center my-3 text-decoration-none text-dark">
+                <img src="imgs/Logo.png" alt="Logo HeadHunting" width="130" height="80" class="mb-2">
+            </a>
+            <hr class="mt-0">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#panel-principal" class="nav-link active" aria-current="page"> Panel Principal</a>
+                </li>
+                <li>
+                    <a href="#candidatos" class="nav-link text-dark"> Candidatos</a>
+                </li>
+                <li>
+                    <a href="#vacantes" class="nav-link text-dark"> Vacantes</a>
+                </li>
+                <li>
+                    <a href="#configuracion" class="nav-link text-dark"> Configuracion</a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                    id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>Perfil</strong>
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="index.html">Cerrar Sesion</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flex-grow-1 p-4 bg-light text-dark" style="min-height: 100vh;">
+            <header class="mb-4 pt-5 pt-md-0" id="panel-principal">
+                <h2>Panel Principal</h2>
+                <hr>
+            </header>
+            
+            <main class="servicios" id="servicios">
+                <div class="servicios-container">
+                    <div class="servicios-tarjeta">
+                        <h2 class="servicios-subtitulo">Total de Candidatos Registrados</h2>
+                        <div class="servicios-tarjeta-texto-imagen">
+                            <h1 class="servicios-texto">+ 2 534 </h1><br>
+                            <img src="imgs/dash1.png" alt="Servicio 1" class="servicios-img">
+                        </div>
+                        <h2 class="subtitulo2"> respecto al mes anterior</h2>
+                    </div>
+                    <div class="servicios-tarjeta">
+                        <h2 class="servicios-subtitulo">Vacantes Directivas Abiertas</h2>
+                        <div class="servicios-tarjeta-texto-imagen">
+                            <h1 class="servicios-texto">45</h1><br>
+                            <img src="imgs/dash2.png" alt="Servicio 1" class="servicios-img">
+                        </div>
+                        <h2 class="subtitulo2"> Roles Activos</h2>
+                    </div>
+                    <div class="servicios-tarjeta">
+                        <h2 class="servicios-subtitulo">Entrevistas Programadas Hoy</h2>
+                        <div class="servicios-tarjeta-texto-imagen">
+                            <h1 class="servicios-texto">18</h1><br>
+                            <img src="imgs/dash3.png" alt="Servicio 1" class="servicios-img">
+                        </div>
+                        <h2 class="subtitulo2"> Simulaciones y Clientes</h2>
+                    </div>
+                    <div class="servicios-tarjeta">
+                        <h2 class="servicios-subtitulo">Candidatos Colocados Exitosamente</h2>
+                        <div class="servicios-tarjeta-texto-imagen">
+                            <h1 class="servicios-texto">112</h1><br>
+                            <img src="imgs/dash4.png" alt="Servicio 1" class="servicios-img">
+                        </div>
+                        <h2 class="subtitulo2"> Tasa de Exito 85%</h2>
+                    </div>
+                </div>
+
+                <div class="container px-0">
+                    <div class="table-card">
+                        <table class="responsive-table">
+                            <caption>Candidatos Recientes (Últimas 24h)</caption>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Candidato</th>
+                                    <th>Area de Interes</th>
+                                    <th>Correo Electronico</th>
+                                    <th>Ultima Actividad</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="ID"><span class="job-title">C-0234</span></td>
+                                    <td data-label="Candidato">Sofia Andrade</td>
+                                    <td data-label="Area de Interes">Finanzas</td>
+                                    <td data-label="Correo Electronico">sofia.andrade@email.com</td>
+                                    <td data-label="Ultima Actividad">15/05/2026</td>
+                                    <td data-label="Estado"><span class="badge proceso">Evaluado</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID"><span class="job-title">C-0151</span></td>
+                                    <td data-label="Candidato">Alejandro Guzman</td>
+                                    <td data-label="Area de Interes">Tecnologia</td>
+                                    <td data-label="Correo Electronico">alejandro.guzman@email.com</td>
+                                    <td data-label="Ultima Actividad">11/10/2025</td>
+                                    <td data-label="Estado"><span class="badge abierta">Entrevistando</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID"><span class="job-title">C-1468</span></td>
+                                    <td data-label="Candidato">Maria Lema</td>
+                                    <td data-label="Area de Interes">RRHH</td>
+                                    <td data-label="Correo Electronico">maria.lema@email.com</td>
+                                    <td data-label="Ultima Actividad">26/05/2026</td>
+                                    <td data-label="Estado"><span class="badge proceso">Evaluado</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID"><span class="job-title">C-4117</span></td>
+                                    <td data-label="Candidato">Carlos Vargas</td>
+                                    <td data-label="Area de Interes">Marketing</td>
+                                    <td data-label="Correo Electronico">carlos.vargas@email.com</td>
+                                    <td data-label="Ultima Actividad">10/01/2026</td>
+                                    <td data-label="Estado"><span class="badge proceso">Evaluado</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID"><span class="job-title">C-0011</span></td>
+                                    <td data-label="Candidato">Daniel Ortega</td>
+                                    <td data-label="Area de Interes">Finanzas</td>
+                                    <td data-label="Correo Electronico">daniel.ortega@email.com</td>
+                                    <td data-label="Ultima Actividad">11/04/2026</td>
+                                    <td data-label="Estado"><span class="badge abierta">Colocado</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+
+            <div class="container px-0 mt-5" id="candidatos">
+                <h2>Gestion de Candidatos</h2>
+                <hr>
+                <div class="actions-bar">
+                    <div class="search-container">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="search-input" placeholder="Buscar por título, cliente o ubicación...">
+                    </div>
+                    <button class="btn-create">
+                        Añadir Nuevo Candidato <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="table-card">
+                    <table class="responsive-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Candidato</th>
+                                <th>Area de Interes</th>
+                                <th>Correo Electronico</th>
+                                <th>Ultima Actividad</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="ID"><span class="job-title">C-0234</span></td>
+                                <td data-label="Candidato">Sofia Andrade</td>
+                                <td data-label="Area de Interes">Finanzas</td>
+                                <td data-label="Correo Electronico">sofia.andrade@email.com</td>
+                                <td data-label="Ultima Actividad">15/05/2026</td>
+                                <td data-label="Estado"><span class="badge proceso">Evaluado</span></td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-pencil btn-action" title="Editar"></i>
+                                        <i class="fa-solid fa-xmark btn-action" title="Eliminar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID"><span class="job-title">C-0151</span></td>
+                                <td data-label="Candidato">Alejandro Guzman</td>
+                                <td data-label="Area de Interes">Tecnologia</td>
+                                <td data-label="Correo Electronico">alejandro.guzman@email.com</td>
+                                <td data-label="Ultima Actividad">11/10/2025</td>
+                                <td data-label="Estado"><span class="badge abierta">Entrevistando</span></td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-pencil btn-action" title="Editar"></i>
+                                        <i class="fa-solid fa-xmark btn-action" title="Eliminar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID"><span class="job-title">C-1468</span></td>
+                                <td data-label="Candidato">Maria Lema</td>
+                                <td data-label="Area de Interes">RRHH</td>
+                                <td data-label="Correo Electronico">maria.lema@email.com</td>
+                                <td data-label="Ultima Actividad">26/05/2026</td>
+                                <td data-label="Estado"><span class="badge proceso">Evaluado</span></td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-pencil btn-action" title="Editar"></i>
+                                        <i class="fa-solid fa-xmark btn-action" title="Eliminar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID"><span class="job-title">C-4117</span></td>
+                                <td data-label="Candidato">Carlos Vargas</td>
+                                <td data-label="Area de Interes">Marketing</td>
+                                <td data-label="Correo Electronico">carlos.vargas@email.com</td>
+                                <td data-label="Ultima Actividad">10/01/2026</td>
+                                <td data-label="Estado"><span class="badge proceso">Evaluado</span></td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-pencil btn-action" title="Editar"></i>
+                                        <i class="fa-solid fa-xmark btn-action" title="Eliminar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID"><span class="job-title">C-0011</span></td>
+                                <td data-label="Candidato">Daniel Ortega</td>
+                                <td data-label="Area de Interes">Finanzas</td>
+                                <td data-label="Correo Electronico">daniel.ortega@email.com</td>
+                                <td data-label="Ultima Actividad">11/04/2026</td>
+                                <td data-label="Estado"><span class="badge abierta">Colocado</span></td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-pencil btn-action" title="Editar"></i>
+                                        <i class="fa-solid fa-xmark btn-action" title="Eliminar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container px-0 mt-5" id="vacantes">
+                <h2>Gestion de Vacantes</h2>
+                <hr>
+                <div class="actions-bar">
+                    <div class="search-container">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="search-input" placeholder="Buscar por título, cliente o ubicación...">
+                    </div>
+                    <button class="btn-create">
+                        Crear Nueva Vacante <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="table-card">
+                    <table class="responsive-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Cliente</th>
+                                <th>Ubicación</th>
+                                <th>Estado</th>
+                                <th>Publicado</th>
+                                <th>Candidatos</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="ID">1001</td>
+                                <td data-label="Título"><span class="job-title">Director de Finanzas</span></td>
+                                <td data-label="Cliente">Multisa</td>
+                                <td data-label="Ubicación">Quito, EC</td>
+                                <td data-label="Estado"><span class="badge abierta">Abierta</span></td>
+                                <td data-label="Publicado">15/05/2026</td>
+                                <td data-label="Candidatos">12</td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-pencil btn-action" title="Editar"></i>
+                                        <i class="fa-solid fa-xmark btn-action" title="Eliminar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">1002</td>
+                                <td data-label="Título"><span class="job-title">Gerente de RRHH</span></td>
+                                <td data-label="Cliente">Corp. La Favorita</td>
+                                <td data-label="Ubicación">Guayaquil, EC</td>
+                                <td data-label="Estado"><span class="badge proceso">En Proceso</span></td>
+                                <td data-label="Publicado">01/05/2026</td>
+                                <td data-label="Candidatos">8</td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-pencil btn-action" title="Editar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">1003</td>
+                                <td data-label="Título"><span class="job-title">VP de Tecnología</span></td>
+                                <td data-label="Cliente">Startup Tech</td>
+                                <td data-label="Ubicación">Remoto</td>
+                                <td data-label="Estado"><span class="badge cerrada">Cerrada</span></td>
+                                <td data-label="Publicado">10/04/2026</td>
+                                <td data-label="Candidatos">25</td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-rotate btn-action" title="Reabrir"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">1004</td>
+                                <td data-label="Título"><span class="job-title">Desarrollador Fullstack</span></td>
+                                <td data-label="Cliente">Innovatech</td>
+                                <td data-label="Ubicación">Quito, EC</td>
+                                <td data-label="Estado"><span class="badge abierta">Abierta</span></td>
+                                <td data-label="Publicado">22/05/2026</td>
+                                <td data-label="Candidatos">18</td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-pencil btn-action" title="Editar"></i>
+                                        <i class="fa-solid fa-xmark btn-action" title="Eliminar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">1005</td>
+                                <td data-label="Título"><span class="job-title">Analista de QA</span></td>
+                                <td data-label="Cliente">Banco del Pacífico</td>
+                                <td data-label="Ubicación">Remoto</td>
+                                <td data-label="Estado"><span class="badge proceso">En Proceso</span></td>
+                                <td data-label="Publicado">18/05/2026</td>
+                                <td data-label="Candidatos">5</td>
+                                <td data-label="Acciones">
+                                    <div class="actions-cell">
+                                        <i class="fa-regular fa-eye btn-action" title="Ver"></i>
+                                        <i class="fa-solid fa-pencil btn-action" title="Editar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container px-0 mt-5" id="configuracion">
+                <h2>Configuracion de Perfil</h2>
+                <hr>
+                <div class="card p-4 border-0 shadow-sm rounded-4">
+                    <h2 class="mb-4">Información del Perfil</h2>
+                    <div class="perfil">
+                        <div class="foto">
+                            <div class="circulo">👤</div>
+                            <button class="btn btn-outline-secondary rounded-pill mt-2">Cambiar Foto</button>
+                        </div>
+
+                        <div class="formulario flex-grow-1">
+                            <div class="grupo mb-3">
+                                <label class="fw-semibold mb-1">Nombre Completo</label>
+                                <input type="text" class="form-control" placeholder="Nombre Completo">
+                            </div>
+                            <div class="grupo mb-3">
+                                <label class="fw-semibold mb-1">Teléfono</label>
+                                <input type="text" class="form-control" placeholder="123 456-8028">
+                            </div>
+                            <div class="grupo mb-3">
+                                <label class="fw-semibold mb-1">Correo Electrónico</label>
+                                <input type="email" class="form-control" placeholder="editable@headgmail.com">
+                            </div>
+                            <div class="grupo mb-3">
+                                <label class="fw-semibold mb-1">Cargo Actual</label>
+                                <input type="text" class="form-control" placeholder="Gerente de Finanzas">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h2 class="mb-3">Trayectoria y Biografía</h2>
+                        <div class="grupo mb-3">
+                            <label class="fw-semibold mb-1">Breve Biografía Profesional</label>
+                            <textarea class="form-control" rows="4" style="resize:none;"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end gap-3 mt-4">
+                            <button class="btn btn-light px-4">Cancelar</button>
+                            <button class="btn btn-create px-4">Guardar Cambios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
